@@ -17,9 +17,9 @@ export function Dashboard() {
                     <table className="table-auto border-collapse w-full text-left">
                         <thead>
                         <tr className="bg-gray-200">
-                            <th className="custom-table-td px-4 py-2 font-semibold">Name</th>
-                            <th className="custom-table-td px-4 py-2 font-semibold">Email</th>
-                            <th className="custom-table-td px-4 py-2 font-semibold">Phone</th>
+                            <th className="custom-table-thead">Name</th>
+                            <th className="custom-table-thead">Email</th>
+                            <th className="custom-table-thead">Phone</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -30,9 +30,9 @@ export function Dashboard() {
                                     index % 2 === 0 ? "bg-gray-50" : "bg-white"
                                 } hover:bg-blue-100 transition-colors`}
                             >
-                                <td className="custom-table-td px-4 py-2">{customer.name}</td>
-                                <td className="custom-table-td px-4 py-2 text-gray-600">{customer.email}</td>
-                                <td className="custom-table-td px-4 py-2">{customer.phone}</td>
+                                <td className="table-data">{customer.name}</td>
+                                <td className="table-data text-gray-600">{customer.email}</td>
+                                <td className="table-data">{customer.phone}</td>
                             </tr>
                         ))}
                         </tbody>

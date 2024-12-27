@@ -20,9 +20,9 @@ export function UpdateCustomer() {
     }
 
     return (
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="customerForm">
             <header>
-                <h2 className="text-2xl font-bold text-gray-700 mb-4">UpdateCustomer</h2>
+                <h2 className="formHeader">Update Customer</h2>
             </header>
             <br/>
             <Modal handleSubmit={handleSubmit} setName={setName} setEmail={setEmail} setPhone={setPhone}>Update
