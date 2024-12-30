@@ -2,9 +2,12 @@ import {useContext} from "react";
 import {Customer} from "../models/Customer";
 import {CustomerContext} from "../store/CustomerProvider";
 import "./Dashboard.css"
+import {Item} from "../models/Item.ts";
+import {ItemContext} from "../store/ItemProvider.tsx";
 
 export function Dashboard() {
     const [customers, dispatch] = useContext(CustomerContext);
+    const [items, item_dispatch] = useContext(ItemContext);
     return (
         <div className="p-6 bg-gray-100 min-h-screen">
             <h1 className="text-4xl font-bold text-gray-800 mb-8 text-left">Dashboard</h1>
@@ -43,16 +46,17 @@ export function Dashboard() {
                 <div className="p-6 bg-white shadow-lg rounded-lg">
                     <h1 className="text-2xl font-bold text-gray-800 mb-4">Items</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {customers.map((customer: Customer, index) => (
+                        {items.map((item: Item, index) => (
                             <div
                                 key={index}
                                 className="bg-white shadow-md rounded-lg p-6 border border-gray-300 hover:shadow-xl transition-shadow"
                             >
                                 <h2 className="text-lg font-semibold text-blue-600 mb-2">
-                                    {customer.name}
+                                    {item.item_code}
                                 </h2>
-                                <p className="text-gray-600 mb-1">{customer.email}</p>
-                                <p className="text-gray-600">{customer.phone}</p>
+                                <p className="text-gray-600 mb-1">{item.category}</p>
+                                <p className="text-gray-600">{item.unit_price}</p>
+                                <p className="text-gray-600">{item.qty}</p>
                             </div>
                         ))}
                     </div>
