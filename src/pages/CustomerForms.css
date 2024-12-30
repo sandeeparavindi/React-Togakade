@@ -1,5 +1,5 @@
 .customerForm {
-    @apply max-w-md mx-auto bg-white shadow-md rounded-lg p-6 mt-10;
+    @apply max-w-md mx-auto bg-gray-100 shadow-md rounded-lg p-6 mt-10;
 }
 
 .formHeader {

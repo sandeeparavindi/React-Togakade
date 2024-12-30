@@ -4,7 +4,7 @@ import {CustomerContext} from "../store/CustomerProvider";
 import {Modal} from "../components/Modal";
 import {Customer} from "../models/Customer";
 
-export function UpdateCustomer() {
+export function Update() {
 
     const navigate = useNavigate();
     const [customers, dispatch] = useContext(CustomerContext);

@@ -4,7 +4,7 @@ import {CustomerContext} from "../store/CustomerProvider";
 import {Customer} from "../models/Customer";
 import {Modal} from "../components/Modal";
 
-export function DeleteCustomer() {
+export function Delete() {
 
     const navigate = useNavigate();
     const [customers, dispatch] = useContext(CustomerContext);

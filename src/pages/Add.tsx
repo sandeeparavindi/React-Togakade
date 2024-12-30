@@ -5,7 +5,7 @@ import {Customer} from "../models/Customer.ts";
 import {Modal} from "../components/Modal";
 import "./CustomerForms.css";
 
-export function AddCustomer() {
+export function Add() {
 
     const navigate = useNavigate();
     const [customers, dispatch] = useContext(CustomerContext);
